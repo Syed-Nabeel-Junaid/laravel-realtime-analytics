@@ -20,23 +20,19 @@ A Laravel-based test project demonstrating real-time order creation and analytic
 git clone https://github.com/yourusername/laravel-realtime-analytics.git
 cd laravel-realtime-analytics
 2. Install dependencies
-bash
-Copy code
+
 composer install
 3. Environment setup
 Copy .env.example and update database + Pusher credentials:
 
-bash
-Copy code
+
 cp .env.example .env
 php artisan key:generate
 4. Run migrations
-bash
-Copy code
+
 php artisan migrate
 5. Serve the app
-bash
-Copy code
+
 php artisan serve
 The app will be available at:
 👉 http://127.0.0.1:8000
@@ -51,8 +47,6 @@ A simple Laravel Blade view that displays new orders instantly when they’re cr
 
 Route:
 
-arduino
-Copy code
 http://127.0.0.1:8000/dashboard
 How it works:
 
