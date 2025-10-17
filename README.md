@@ -1,39 +1,41 @@
-# Laravel Real-Time Analytics
+Laravel Real-Time Analytics
 
-A Laravel-based test project demonstrating real-time order creation and analytics using **Pusher** for event broadcasting.
+A Laravel-based test project demonstrating real-time order creation and analytics using Pusher for event broadcasting.
 
----
+🚀 Features
 
-## 🚀 Features
-- Create Order API (`POST /api/orders`)
-- Get Active Orders API (`GET /api/orders/active`)
-- Real-time updates via **Pusher** (`OrderCreated` event)
-- RESTful structure with Laravel 9 and PHP 8
-- Simple real-time dashboard to visualize new orders
+Create Order API (POST /api/orders)
 
----
+Get Active Orders API (GET /api/orders/active)
 
-## ⚙️ Installation
+Real-time updates via Pusher (OrderCreated event)
 
-### 1. Clone the repository
-```bash
+RESTful structure with Laravel 9 and PHP 8
+
+Simple real-time dashboard to visualize new orders
+
+⚙️ Installation
+1. Clone the repository
 git clone https://github.com/yourusername/laravel-realtime-analytics.git
 cd laravel-realtime-analytics
+
 2. Install dependencies
-
 composer install
-3. Environment setup
-Copy .env.example and update database + Pusher credentials:
 
+3. Environment setup
+
+Copy .env.example and update database + Pusher credentials:
 
 cp .env.example .env
 php artisan key:generate
+
 4. Run migrations
-
 php artisan migrate
-5. Serve the app
 
+5. Serve the app
 php artisan serve
+
+
 The app will be available at:
 👉 http://127.0.0.1:8000
 
@@ -41,13 +43,13 @@ The app will be available at:
 Method	Endpoint	Description
 POST	/api/orders	Create a new order
 GET	/api/orders/active	Fetch active orders
-
 🖥️ Real-Time Dashboard
+
 A simple Laravel Blade view that displays new orders instantly when they’re created.
 
 Route:
-
 http://127.0.0.1:8000/dashboard
+
 How it works:
 
 Listens on the orders channel for the OrderCreated event through Pusher.
@@ -57,6 +59,7 @@ When a new order is placed (via POST /api/orders), it appears automatically on t
 Uses the Pusher JavaScript library to subscribe and update the page in real-time.
 
 🧩 Technologies
+
 Laravel 9
 
 MySQL
